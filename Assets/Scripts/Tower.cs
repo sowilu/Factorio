@@ -38,4 +38,10 @@ public class Tower : MonoBehaviour
            bulletInstance.GetComponent<Bullet>().SetTarget(closestEnemy.transform);
         }
     }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
 }

@@ -32,10 +32,14 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.transform == target)
+        if (other.transform.CompareTag("Enemy"))
         {
             target.gameObject.GetComponent<Health>().TakeDamage(damage);
             Destroy(gameObject);
+        }
+        else
+        {
+           // Destroy(gameObject);
         }
     }
 }

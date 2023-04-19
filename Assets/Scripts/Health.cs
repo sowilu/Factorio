@@ -38,6 +38,9 @@ public class Health : MonoBehaviour
             
             if(deathParticles != null)
                 Instantiate(deathParticles, transform.position, Quaternion.identity);
+            
+            if(selfDestruct)
+                Destroy(gameObject);
         }
     }
 }
