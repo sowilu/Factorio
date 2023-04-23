@@ -973,6 +973,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 20552149}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &25607750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25607751}
+  m_Layer: 0
+  m_Name: Invenory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &25607751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25607750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.882719, y: 10.7683525, z: 11.630393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &25998395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68530,7 +68561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
-  fireRate: 1
+  fireRate: 5
   bullet: {fileID: 5788767522466160574, guid: 1d2eea773eee9a14c87daf628cc9a714, type: 3}
   shootingPoint: {fileID: 1075915168}
 --- !u!208 &1265949426

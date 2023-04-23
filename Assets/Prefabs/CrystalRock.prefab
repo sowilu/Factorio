@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6075600445946778267}
   - component: {fileID: 8337334042681419345}
   - component: {fileID: 7238899243965922003}
+  - component: {fileID: 6086334366565130172}
   m_Layer: 0
   m_Name: CrystalRock
   m_TagString: Crystal
@@ -99,3 +100,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.58
   m_Center: {x: -0.010330409, y: 0.27499998, z: 0.008203387}
+--- !u!114 &6086334366565130172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544889831254624132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc3329729d7bdd429a49aa42f4fb9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  amount: 1000
+  miningTime: 1

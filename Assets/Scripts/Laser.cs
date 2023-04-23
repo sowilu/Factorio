@@ -55,8 +55,12 @@ public class Laser : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Crystal"))
                 {
-                    if(miningStart == -1)
+                    if (miningStart == -1)
+                    {
                         miningStart = Time.time;
+                        miningDuration = hit.transform.GetComponent<Resource>().miningTime;
+                    }
+                        
                     
                     miningSparks.position = hit.point;
                     crystalParticles.transform.position = hit.point;
