@@ -10,10 +10,12 @@ public class Bullet : MonoBehaviour
     public int damage = 20;
     
     private Transform target;
+    private string targetTag = "Enemy";
     
     public void SetTarget(Transform target)
     {
         this.target = target;
+        targetTag = target.tag;
         
         //rotate towards target
         transform.LookAt(target);
@@ -32,14 +34,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.transform.CompareTag("Enemy"))
+        if (other.transform.CompareTag(targetTag))
         {
             target.gameObject.GetComponent<Health>().TakeDamage(damage);
             Destroy(gameObject);
-        }
-        else
-        {
-           // Destroy(gameObject);
         }
     }
 }
