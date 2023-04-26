@@ -11,6 +11,7 @@ public enum ResourceType{
 
 public class Resource : MonoBehaviour
 {
+    public Sprite icon;
     public ResourceType type;
     public int amount = 1000;
     public float miningTime = 1;

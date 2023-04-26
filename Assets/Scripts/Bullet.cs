@@ -36,6 +36,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.transform.CompareTag(targetTag))
         {
+            if (transform == null) return;
             target.gameObject.GetComponent<Health>().TakeDamage(damage);
             Destroy(gameObject);
         }

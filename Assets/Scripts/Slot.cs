@@ -16,7 +16,7 @@ public class Slot : MonoBehaviour
         image.sprite = slot.image;
     }
     
-    public void AddAmount(int amount)
+    public void DisplayAmount(int amount)
     {
         amountText.text = amount.ToString();
 

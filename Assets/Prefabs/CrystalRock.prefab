@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc3329729d7bdd429a49aa42f4fb9c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: c10f8cdcda4734a4ab0691669d73de2f, type: 3}
   type: 0
   amount: 1000
   miningTime: 1
