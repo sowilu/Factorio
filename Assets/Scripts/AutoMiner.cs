@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AutoMiner : MonoBehaviour
 {
+    public float conveyorRange = 3;
     public NotificationImage notificationImage;
     public Resource resource;
 
@@ -21,10 +22,36 @@ public class AutoMiner : MonoBehaviour
         {
             yield return new WaitForSeconds(resource.miningTime);
             //Inventory.instance.AddResource(resource.type, 1);
-            stash++;
-            notificationImage.ShowImage(resource.icon);
+            
+            var conveyorPosition = GetConveyorPosition();
+
+            if (conveyorPosition.x == 999)
+            {
+                stash++; 
+                notificationImage.ShowImage(resource.icon);
+            }
+            else
+            {
+                Instantiate(resource.prefab, conveyorPosition + Vector3.up, Quaternion.identity);
+            }
             resource.amount--;
         }
+    }
+    
+    
+    Vector3 GetConveyorPosition()
+    {
+        var colliders = Physics.OverlapSphere(transform.position, conveyorRange);
+        
+        foreach (var collider in colliders)
+        {
+            if (collider.CompareTag("Conveyor"))
+            {
+                return collider.transform.position;
+            }
+        }
+
+        return new Vector3(999, 999, 999);
     }
 
     private void OnTriggerEnter(Collider other)

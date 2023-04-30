@@ -43,7 +43,7 @@ public class Laser : MonoBehaviour
         {
             miningStart = Time.time;
             crystalParticles.Play();
-            CrystalCounter.instance.AddCrystals(1);
+            Inventory.instance.AddResource(ResourceType.Crystal, 1);
         }
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,9 @@ public class Tower : MonoBehaviour
     public float fireRate = 1f;
     public GameObject bullet;
     public Transform shootingPoint;
-    
     float fireTimer = 0;
+
+    public int bulletCount = 0;
     
     void Update()
     {
@@ -43,5 +45,14 @@ public class Tower : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Crystal"))
+        {
+            bulletCount += 1;
+            Destroy(other.gameObject);
+        }
     }
 }

@@ -11,6 +11,7 @@ public enum ResourceType{
 
 public class Resource : MonoBehaviour
 {
+    public GameObject prefab;
     public Sprite icon;
     public ResourceType type;
     public int amount = 1000;
