@@ -68541,6 +68541,7 @@ MonoBehaviour:
   fireRate: 5
   bullet: {fileID: 5788767522466160574, guid: 1d2eea773eee9a14c87daf628cc9a714, type: 3}
   shootingPoint: {fileID: 1075915168}
+  bulletCount: 0
 --- !u!208 &1265949426
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -94396,6 +94397,125 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1835599056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1837075065
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Smelter
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4c9e9760094cf2409fded3d2cd755a0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4c9e9760094cf2409fded3d2cd755a0, type: 3}
+--- !u!1 &1837075066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e4c9e9760094cf2409fded3d2cd755a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1837075065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1837075067
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837075066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.49
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!65 &1837075068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837075066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1.8, z: 1.3999999}
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &1837075069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837075066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d71f00b40aeabb46873e98d98c5ba1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conveyorRange: 3
 --- !u!1001 &1839182702
 PrefabInstance:
   m_ObjectHideFlags: 0
