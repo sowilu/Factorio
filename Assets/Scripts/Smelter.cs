@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Smelter : MonoBehaviour
@@ -24,7 +25,7 @@ public class Smelter : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
             
-            foreach (var ore in ores)
+            foreach (var ore in ores.ToList())
             {
 
                 if(ore.Key.byproductAmount <= ore.Value)
@@ -37,7 +38,7 @@ public class Smelter : MonoBehaviour
                     if (pos.x != 999)
                     {
                         Instantiate(ore.Key.byproduct, pos + Vector3.up, Quaternion.identity);
-                        ores[ore.Key] -= ore.Key.byproductAmount;
+                        ores[ore.Key] -= 1;
                     }
                     else
                     {
